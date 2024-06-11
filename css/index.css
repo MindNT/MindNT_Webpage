@@ -796,3 +796,81 @@ transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--tran
   animation: estroboscopico1 0.8s infinite;
   animation-delay: 3s;
 }
+
+
+
+/* Productos Section Styles */
+.productos-section {
+  text-align: center;
+  padding: 2em 0;
+  background-color: #ffffff; /* Fondo ligero para destacar la sección */
+  padding: 2em 10%; /* Añadido padding para los bordes */
+  box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+}
+
+.productos-title {
+  color: #1473fb;
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.productos-sub {
+  color: #999797;
+  font-size: 16px;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.productos-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2em; /* Espacio entre las tarjetas */
+}
+
+.producto-card {
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 1.5em;
+  text-align: center;
+  flex: 1; /* Para que las tarjetas ocupen el mismo espacio */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.producto-title {
+  color: #1473fb;
+  margin-bottom: 0.5em;
+}
+
+.producto-description {
+  color: #999797;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.producto-gif {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.producto-button {
+  background-color: #1473fb;
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  align-self: center; /* Centrar el botón horizontalmente */
+}
+
+.producto-button:hover {
+  background-color: #055ada;
+}
