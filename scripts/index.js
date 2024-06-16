@@ -1,27 +1,21 @@
-let currentSlide = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    const languageToggle = document.getElementById('languageToggle');
+    const isEnglish = localStorage.getItem('isEnglish') === 'true';
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.review-card');
-    const totalSlides = slides.length;
-    if (index >= totalSlides) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = totalSlides - 1;
+    if (isEnglish) {
+        languageToggle.checked = true;
     } else {
-        currentSlide = index;
+        languageToggle.checked = false;
     }
-    const carousel = document.getElementById('carousel');
-    const offset = -currentSlide * 100; // Cambio a 100% para reflejar el nuevo ancho de las tarjetas
-    carousel.style.transform = `translateX(${offset}%)`;
-}
 
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
-
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
-
-// Inicializa el carrusel mostrando la primera diapositiva
-showSlide(currentSlide);
+    // Add event listener for toggle switch
+    languageToggle.addEventListener('change', function() {
+        if (this.checked) {
+            localStorage.setItem('isEnglish', 'true');
+            window.location.href = 'indexEN.html'; // Asegúrate de que esta URL sea correcta
+        } else {
+            localStorage.setItem('isEnglish', 'false');
+            window.location.href = 'index.html'; // Asegúrate de que esta URL sea correcta
+        }
+    });
+});

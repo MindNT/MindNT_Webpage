@@ -25,7 +25,8 @@ nav#menu {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  padding-left: 30em;
+  flex-wrap: nowrap; /* Añadido para evitar saltos de línea */
+  padding-left: 25em; /* Ajustar según sea necesario */
 }
 
 nav#menu a {
@@ -33,7 +34,8 @@ nav#menu a {
   color: #999797;
   font-size: 1rem;
   font-weight: bold;
-  margin: 0 20px;
+  margin: 0 20px; /* Reducir el margen para ahorrar espacio */
+  white-space: nowrap; /* Evitar que las palabras se dividan */
 }
 
 /* Hero Section Styles */
@@ -92,6 +94,11 @@ button.hero-button .icon {
 width: 24px;
 height: 24px;
 }
+
+.no-underline {
+  text-decoration: none;
+}
+
 
 /* Loader Animation */
 .boxes {
@@ -534,7 +541,7 @@ transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--tran
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 1em;
-  border-radius: 50px;
+  border-radius: 10px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -881,7 +888,7 @@ transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--tran
   text-align: center;
   padding: 4em 0;
   background-color: #e6f0fd; /* Fondo azul */
-  color: #1473fb; /* Texto blanco */
+  color: #1473fb; /* Texto azul */
   position: relative;
 }
 
@@ -903,6 +910,25 @@ transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--tran
   font-weight: normal;
   margin-bottom: 2em;
   color: #999797;
+}
+
+.contact-button-container {
+  padding-top: 1em;
+  text-align: center;
+}
+
+.contact-button {
+  background-color: #1473fb;
+  color: white;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #0044cc;
 }
 
 .custom-icon {
@@ -1069,3 +1095,140 @@ transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--tran
   margin-top: 2em;
 }
 
+
+
+
+/* Toggle Switch Styles */
+.toggle-container {
+  --active-color: #1868e3;
+  --inactive-color: #d3d3d6;
+  position: relative;
+  aspect-ratio: 292 / 142;
+  height: 1.5em; /* Reducir el tamaño del toggle */
+  margin-left: 1em; /* Add margin to the left of the toggle */
+}
+
+.toggle-input {
+  appearance: none;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.toggle {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.toggle-background {
+  fill: var(--inactive-color);
+  transition: fill .4s;
+}
+
+.toggle-input:checked + .toggle .toggle-background {
+  fill: var(--active-color);
+}
+
+.toggle-circle-center {
+  transform-origin: center;
+  transition: transform .6s;
+}
+
+.toggle-input:checked + .toggle .toggle-circle-center {
+  transform: translateX(100px); /* Ajustar para el nuevo tamaño del toggle */
+}
+
+.toggle-circle {
+  transform-origin: center;
+  transition: transform .45s;
+  backface-visibility: hidden;
+}
+
+.toggle-circle.left {
+  transform: scale(1);
+}
+
+.toggle-input:checked + .toggle .toggle-circle.left {
+  transform: scale(0);
+}
+
+.toggle-circle.right {
+  transform: scale(0);
+}
+
+.toggle-input:checked + .toggle .toggle-circle.right {
+  transform: scale(1);
+}
+
+.toggle-icon {
+  transition: fill .4s;
+}
+
+.toggle-icon.on {
+  fill: var(--inactive-color);
+}
+
+.toggle-input:checked + .toggle .toggle-icon.on {
+  fill: #fff;
+}
+
+.toggle-icon.off {
+  fill: #eaeaec;
+}
+
+.toggle-input:checked + .toggle .toggle-icon.off {
+  fill: var(--active-color);
+}
+
+.switch-EN,
+.switch-ES {
+  color: #4e4d4d;
+  font-size: 0.875em; /* Tamaño de fuente más pequeño */
+  font-weight: bold; /* Texto en negrita */
+}
+
+.switch-EN {
+  margin-left: 0.5em; /* Añadir margen a la izquierda */
+  align-self: center; /* Asegurar que esté centrado verticalmente */
+}
+
+.switch-ES {
+  margin-right: 0em; /* Añadir margen a la derecha */
+  align-self: right; /* Asegurar que esté centrado verticalmente */
+}
+
+
+
+
+/* Brands Section Styles */
+.brands-section {
+  background-color: #ffffff; /* Fondo diferente para destacar */
+  padding: 2em 0;
+}
+
+.brands-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+
+.brand-logo {
+  flex: 1 1 auto;
+  max-width: 7%; /* Ajusta este valor según sea necesario */
+  margin: 0 0.5em;
+  transition: transform 0.3s;
+}
+
+.brand-logo:hover {
+  transform: scale(1.5);
+}
