@@ -1035,7 +1035,7 @@ transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--tran
 /* Footer Section Styles */
 .footer-section {
   background-color: #ffffff;
-  color: #055ada;
+  color: #1473fb;
   padding: 2em 0;
   text-align: left;
 }
@@ -1078,7 +1078,7 @@ transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--tran
 }
 
 .footer-social li a {
-  color: #055ada;
+  color: #1473fb;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -1100,7 +1100,7 @@ transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--tran
 
 /* Toggle Switch Styles */
 .toggle-container {
-  --active-color: #1868e3;
+  --active-color: #1473fb;
   --inactive-color: #d3d3d6;
   position: relative;
   aspect-ratio: 292 / 142;
