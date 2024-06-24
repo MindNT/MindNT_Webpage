@@ -434,20 +434,20 @@ transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--tran
 }
 
 .card .paleta .cor1 {
-  background-color: #0e3746;
+  background-color: #4e4d4d;
   border-radius: 0px 0px 0px 10px;
 }
 
 .card .paleta .cor2 {
-  background-color: #eae8dc;
+  background-color: #1473fb;
 }
 
 .card .paleta .cor3 {
-  background-color: #f4f2ec;
+  background-color: #999797;
 }
 
 .card .paleta .cor4 {
-  background-color: #be2623;
+  background-color: #e7eBec;
   border-radius: 0px 0px 10px 0px;
 }
 
@@ -505,19 +505,19 @@ transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--tran
 }
 
 .div1:hover + .div2 {
-  background-color: #0e3746;
+  background-color: #4e4d4d;
 }
 
 .div3:hover + .div4 {
-  background-color: #eae8dc;
+  background-color: #1473fb;
 }
 
 .div5:hover + .div6 {
-  background-color: #f4f2ec;
+  background-color: #999797;
 }
 
 .div7:hover + .div8 {
-  background-color: #be2623;
+  background-color: #e7eBec;
 }
 
 @keyframes cssAnimation_0 {
@@ -691,7 +691,7 @@ transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--tran
 
 .rounded-gif {
   width: 80%; /* Ajuste de la anchura del GIF */
-  max-width: 400px; /* Ancho máximo del GIF */
+  max-width: 300px; /* Ancho máximo del GIF */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
